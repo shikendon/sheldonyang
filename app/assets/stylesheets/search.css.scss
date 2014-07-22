@@ -1,0 +1,28 @@
+@import 'Template';
+
+#middlewrap {
+  text-align: center;
+}
+#searchbox {
+  text-align: left;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+#formsearch>div {
+  width: 400px;
+}
+.subcontainer {
+  width: 80%;
+  margin: 0px auto;;
+}
+.reference_field li {
+  float: right;
+  font-size: smaller;
+}
+.tag-cloud {
+  margin-top: $default-line-spacing;
+
+  li {
+    margin: 4px 0px;
+  }
+}

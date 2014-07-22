@@ -1,0 +1,13 @@
+@import 'Template';
+
+[id^="new_tag_i18n"], [id^="edit_tag_i18n"] {
+  div {
+    display: inline-block;
+  }
+}
+
+.tags-index {
+  li>a {
+    font-size: smaller;
+  }
+}

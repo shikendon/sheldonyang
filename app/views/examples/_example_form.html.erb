@@ -1,0 +1,23 @@
+<%= render_error_message(@example) %>
+<div class="row">
+  <%= form_for @example, url: method(url).call(@example) do |f| %>
+    <div class="col-xs-9">
+      <%= f.text_area :text, class: 'form-control', rows: 3, placeholder: 'This is an example.' %>
+      <div class="comments_field"><%= render_example_form_comment_fields(f) %></div>
+      <div><%= button_tag 'Add more comment', id: 'button_new_comment', class: 'btn btn-default btn-sm', type: 'button' %></div>
+      <div class="commit_field"><%= f.submit 'Submit', class: 'btn btn-default' %><%= link_to 'Cancel', {action: 'index'}, class: 'button_cancel' %></div>
+      <div class="verified_field"><%= render_example_verified_checkbox(f, @example) %></div>
+      <%= render_field_template(f, :comments) %>
+      <%= render_field_template(f, :tags) %>
+      <%= render_example_operation_button(@example) %>
+    </div>
+    <div class="col-xs-3 tags_field">
+      <div class="list-group">
+        <% @tag_i18ns.each do |tag_i18n| %>
+          <%= content_tag :a, tag_i18n.name, class: 'list-group-item', data: {tag_i18n_id: tag_i18n.id} %>
+        <% end %>
+      </div>
+      <%= render_example_form_tag_fields(f) %>
+    </div>
+  <% end %>
+</div>

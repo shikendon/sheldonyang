@@ -1,0 +1,6 @@
+<div class="row row_comment">
+  <div class="col-xs-3"><%= comments_form.text_field :matchtext, class: 'form-control', placeholder: 'English' %></div>
+  <div class="col-xs-3"><%= comments_form.text_field :aliastext, class: 'form-control', placeholder: 'English alias (optional)' %></div>
+  <div class="col-xs-3"><%= comments_form.text_field :transtext, class: 'form-control', placeholder: 'Chinese' %></div>
+  <div><%= comments_form.check_box :_destroy, title: 'delete?' %></div>
+</div>

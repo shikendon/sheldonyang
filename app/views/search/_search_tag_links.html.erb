@@ -1,0 +1,5 @@
+<ul class="breadcrumb">
+  <% @tag_i18ns.each do |tag_i18n| %>
+    <%= content_tag(:li) { link_to tag_i18n.name, show_tag_path(tag_i18n) } %>
+  <% end %>
+</ul>

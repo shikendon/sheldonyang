@@ -1,0 +1,100 @@
+$fonts-default: 'Helvetica Neue', 'Ubuntu Condensed', Verdana, Arial;
+
+body {
+  font-family: $fonts-default, '微軟正黑體', 'Microsoft JhengHei', sans-serif;
+  font-size: medium;
+  word-break: break-all;
+  color: #666666;
+}
+input, button, textarea {
+  font-family: inherit;
+}
+hr{border: 1px dashed #CCCCCC;}
+#pagepanel {
+  padding: 18px;
+  text-align: center;
+}
+#pagepanel>* {
+  display: inline-block;
+}
+#search_result li:first-child {
+  margin-top: 1em;
+}
+#search_result li:not(:first-child) {
+  margin-top: 5em;
+}
+.pagination {
+  float: right;
+  margin-top: 12px;
+  margin-bottom: 24px;
+
+  .first a, .prev a, .page a, .next a, .last a, .current, .gap {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    line-height: 1.42857143;
+    text-decoration: none;
+    margin-left: -1px;
+  }
+  .first a, .prev a, .page a, .next a, .last a {
+    color: #428bca;
+    border: 1px solid #ddd;
+
+    &:hover {
+      color: #2a6496;
+      background-color: #eee;
+      border-color: #ddd;
+    }
+  }
+  .first a {
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+  }
+  .last a {
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+  .current {
+    color: #fff;
+    background-color: #428bca;
+    border: 1px solid #428bca;
+  }
+  .gap {
+    color: #BBBBBB;
+  }
+}
+.tags {
+  position: relative;
+  text-decoration: underline;
+}
+.tags::before {
+  position: absolute;
+  left: 0px;
+  bottom: 80%;
+  content: attr(data-transtext);
+  color: #CCCCCC;
+  padding: 4px 0px;
+  white-space: nowrap;
+}
+.tags::after {
+  position: absolute;
+  left: 0px;
+  top: 80%;
+  content: attr(data-aliastext);
+  color: #CCCCCC;
+  padding: 4px 0px;
+  white-space: nowrap;
+}
+.tags:hover, .tags:hover::before, .tags:hover::after {
+  cursor: pointer;
+  color: #777777;
+}
+.nojs {
+  color: #FF0000;
+}
+.chinese {
+  font-family: '微軟正黑體';
+}
+.textleft {text-align: left;}
+.textcenter {text-align: center;}
+.text-align {vertical-align: text-top;}

@@ -1,0 +1,8 @@
+<%= render_search_form %>
+<div>相關詞彙：</div>
+<ul class="breadcrumb tag-cloud">
+  <% @related_words.each do |related_word| %>
+    <%= content_tag(:li) { link_to related_word, search_path(q: related_word) } %>
+  <% end %>
+</ul>
+<%= render_search_result(@examples) %>

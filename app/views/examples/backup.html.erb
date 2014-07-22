@@ -1,0 +1,11 @@
+<%= form_tag({action: 'export'}, method: :get, multipart: true) do %>
+  <%= select_tag 'table_name', options_for_select(table_options) %>
+  <%= submit_tag 'Export' %>
+<% end %>
+<%= form_tag({action: 'import'}, method: :post, multipart: true) do %>
+  <%= select_tag 'table_name', options_for_select(table_options) %>
+  <%= label_tag 'destroy_all', 'delete all?' %>
+  <%= check_box_tag 'destroy_all' %>
+  <%= file_field_tag 'attachment' %>
+  <%= submit_tag 'Import' %>
+<% end %>

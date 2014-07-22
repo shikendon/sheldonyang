@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta content="<%= @page_description %>" name="description" />
+<meta content="<%= @page_keywords %>" name="keywords" />
+<%= csrf_meta_tags %>
+<title><%= @page_title %></title>
+<%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css', media: 'all', 'data-turbolinks-track' => true %>
+<%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css', media: 'all', 'data-turbolinks-track' => true %>
+<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag '//maxcdn.bootstrapcdn.com/bootstrap/latest/js/bootstrap.min.js', 'data-turbolinks-track' => true %>
+</head>
+<body>
+<%= render partial: 'partials/navbar' %>
+<div id="container" class="container">
+<%= content_tag(:p, notice, class: 'alert alert-info') if notice %>
+<%= content_tag(:p, alert, class: 'alert alert-danger') if alert %>
+<%= yield %>
+</div>
+</body>
+</html>

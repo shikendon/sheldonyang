@@ -1,0 +1,11 @@
+<div class="search-result">
+    <% if examples.count > 0 %>
+      <% examples.each do |example| %>
+        <%= content_tag :blockquote do %>
+          <%= content_tag(:p, example.text) %> <%= render_example_edit_link(example) %>
+        <% end %>
+      <% end %>
+    <% else %>
+      <%= content_tag :p, '找不到任何與搜尋字詞相關的例句。' %>
+    <% end %>
+</div>

@@ -1,0 +1,61 @@
+@import 'Template';
+
+[id^="new_example"], [id^="edit_example"] {
+  #button_new_comment {
+    margin-top: $default-line-spacing;
+    margin-bottom: $default-line-spacing;
+  }
+  .row_comment {
+    margin-top: $default-line-spacing;
+    margin-bottom: $default-line-spacing;
+  }
+  .verified_field {
+    @extend .noselect;
+
+    #example_verified {
+      margin-left: 4px;
+      vertical-align: top;
+    }
+  }
+  .commit_field {
+    text-align: center;
+
+    .button_cancel {
+      margin-left: 1em;
+    }
+  }
+}
+.example_list {
+  .posttime, .author, .verified, .edit {
+    text-align: center;
+    white-space: nowrap;
+  }
+  .posttext {
+    max-width: 720px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.new_example_button_field {
+  @extend .clearfix;
+
+  .new_example_button {
+    float: right;
+    margin-top: $default-line-spacing;
+    margin-bottom: $default-line-spacing;
+  }
+}
+.operation_button_field {
+  @extend .clearfix;
+  margin-top: $default-line-spacing;
+
+  .dropdown {
+    float: right;
+  }
+}
+.tags_field a {
+  @extend .noselect;
+
+  cursor: pointer;
+}

@@ -1,0 +1,39 @@
+@import 'Mixins';
+
+$default-input-text-width: 50em;
+$default-line-spacing: 12px;
+$default-border-decoration: 1px solid #808080;
+
+.default-table-td {
+  padding: 2px 4px;
+}
+.default-input-text {
+  padding: 2px 4px;
+}
+.default-textarea {
+  padding: 6px 8px;
+}
+.default-button {
+  padding: 2px 8px;
+}
+.default-hover-effect {
+  &:hover {
+    background-color: rgba(128, 128, 128, 0.2);
+  }
+}
+.default-radius-box {
+  border-radius: 4px;
+}
+.default-errormsg {
+  color: #FF0000;
+}
+.clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+.noselect {
+  @include vendor-prefix(user-select, none);
+}

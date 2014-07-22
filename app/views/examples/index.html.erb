@@ -1,0 +1,25 @@
+<div class="new_example_button_field"><%= link_to 'New example', new_example_path, class: 'new_example_button btn btn-success' %></div>
+<div class="panel panel-default">
+  <div class="panel-heading">Recent examples</div>
+  <table class="table example_list">
+    <tbody>
+      <tr>
+        <th class="posttime">Time</th>
+        <th class="posttext">Example</th>
+        <th class="author">Author</th>
+        <th class="verified">Verified?</th>
+        <th class="edit">Edit</th>
+      </tr>
+      <% @examples.each do |example| %>
+        <tr>
+          <td class="posttime"><%= date_tag(example.created_at) %></td>
+          <td class="posttext"><%= example.text %></td>
+          <td class="author"><%= example.user_name %></td>
+          <td class="verified"><%= example.verified_or_not %></td>
+          <td class="edit"><%= render_example_edit_link(example) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= render_pagination(@examples) %>
+</div>

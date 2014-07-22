@@ -1,0 +1,5 @@
+<%= render_error_message(@tag_i18n) %>
+<%= form_for @tag_i18n, url: edit_tag_path(@tag_i18n) do |f| %>
+  <%= f.text_field :name %>
+  <%= f.submit 'Update' %>
+<% end %>

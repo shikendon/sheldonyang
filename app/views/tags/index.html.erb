@@ -1,0 +1,11 @@
+<ul class="tags-index list-group">
+  <% @tag_i18ns.each do |tag_i18n| %>
+    <%= content_tag :li, class: 'list-group-item' do %>
+      <%= tag_i18n.name %>
+      <%= link_to 'Edit', edit_tag_path(tag_i18n) %>
+      <%= link_to 'Delete', tag_path(tag_i18n), method: :delete, data: {confirm: 'Are you sure you want to delete this tag?'} %>
+      <%= content_tag :span, tag_i18n.tags.count, class: 'badge' %>
+    <% end %>
+  <% end %>
+</ul>
+<%= link_to 'Add new tag', new_tag_path, class: 'new_example_button btn btn-success' %>
