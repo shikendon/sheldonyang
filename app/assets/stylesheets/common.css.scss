@@ -1,3 +1,5 @@
+@import 'Mixins';
+
 $fonts-default: 'Helvetica Neue', 'Ubuntu Condensed', Verdana, Arial;
 
 body {
@@ -91,6 +93,13 @@ hr{border: 1px dashed #CCCCCC;}
 }
 .nojs {
   color: #FF0000;
+}
+.forkme {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border: 0;
+  @include vendor-prefix(transform, rotate(90deg));
 }
 .chinese {
   font-family: '微軟正黑體';

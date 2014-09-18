@@ -15,9 +15,12 @@
 <body>
 <%= render partial: 'partials/navbar' %>
 <div id="container" class="container">
-<%= content_tag(:p, notice, class: 'alert alert-info') if notice %>
-<%= content_tag(:p, alert, class: 'alert alert-danger') if alert %>
+<%= content_tag(:p, notice, class: 'alert alert-info') if notice -%>
+<%= content_tag(:p, alert, class: 'alert alert-danger') if alert -%>
 <%= yield %>
 </div>
+<%= link_to 'https://github.com/jrsdotdung/sheldonyang' do %>
+  <%= image_tag 'https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png', class: 'forkme', alt: 'Fork me on GitHub' %>
+<% end %>
 </body>
 </html>
