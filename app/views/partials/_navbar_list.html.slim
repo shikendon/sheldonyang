@@ -1,0 +1,4 @@
+ul.nav.navbar-nav.navbar-right
+  = content_tag(:li, class: current_page?(examples_path) ? 'active' : '')
+    = link_to 'Examples', examples_path
+  = render_navbar_list_private

@@ -1,8 +1,0 @@
-<% if user_signed_in? %>
-  <% if current_user.level >= 5 %>
-    <%= content_tag(:li, class: current_page?(tags_path) ? 'active' : '') { link_to 'Tags', tags_path } %>
-  <% end %>
-  <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
-<% else %>
-  <li><%= link_to 'Sign in', new_user_session_path %></li>
-<% end %>

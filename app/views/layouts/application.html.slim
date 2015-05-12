@@ -1,0 +1,18 @@
+doctype html
+html lang="en"
+  head
+    meta charset="utf-8"
+    meta name="description" content=@page_description
+    meta name="keywords" content=@page_keywords
+    = csrf_meta_tags
+    title = @page_title
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+  body
+    = render partial: 'partials/navbar'
+    #container.container
+      = content_tag(:p, notice, class: 'alert alert-info') if notice
+      = content_tag(:p, alert, class: 'alert alert-danger') if alert
+      = yield
+    = link_to 'https://github.com/jrsdotdung/sheldonyang'
+      = image_tag '//i.imgur.com/MTWHQ07.png', class: 'forkme', alt: 'Fork me on GitHub'

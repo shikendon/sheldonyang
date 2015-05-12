@@ -1,0 +1,37 @@
+h3
+  | Users
+.span8
+  table.table.table-condensed
+    thead
+      tr
+        th
+          | Username
+        th
+          | Email
+        th
+          | Registered
+        th
+          | Current Sign in
+        th
+          | Level
+        th
+        th
+    tbody
+      - @users.each do |user|
+        tr
+          td
+            = link_to user.name, user
+          td
+            = user.email
+          td
+            = user.created_at.to_date
+          td
+            = user.current_sign_in_at.to_date
+          td
+            = user.level
+          td
+            a data-toggle="modal" href="#level-options-#{user.id}" class="btn btn-mini btn-primary" type="button"
+              | Change level
+            = render user
+          td
+            = link_to("Delete user", user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini btn-danger') unless user == current_user

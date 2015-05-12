@@ -1,0 +1,13 @@
+div id="level-options-#{user.id}" class="modal" style="display: none;"
+  = form_for user, :url => user_path(user), :html => {:method => :put, :class => 'form-horizontal' } do |f|
+    .modal-header
+      a.close data-dismiss="modal"
+        | ×
+      h3
+        | Change level
+    .modal-body
+      = f.text_field :level
+    .modal-footer
+      = f.submit "Change level", :class => "btn"
+      a.btn data-dismiss="modal" href="#"
+        | Close
