@@ -32,6 +32,8 @@ gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 # Use omniauth-yahoo as Yahoo OAuth2 strategy
 gem 'omniauth-yahoo'
+# Use bootstrap-sass as HTML, CSS, and JS framework
+gem 'bootstrap-sass'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.2.0'
