@@ -16,6 +16,8 @@ end
 gem 'kaminari'
 # Use nokogiri as HTML parser
 gem 'nokogiri'
+# Use Slim for template
+gem 'slim-rails'
 # Use devise as authentication solution
 gem 'devise'
 # Use omniauth as authentication solution
