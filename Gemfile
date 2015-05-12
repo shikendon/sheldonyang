@@ -9,6 +9,7 @@ group :production do
   gem 'rails_12factor'
   gem 'dalli'
   gem 'memcachier'
+  gem 'puma', platforms: :ruby
 end
 
 # Use kaminari as paginator
@@ -57,7 +58,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
-gem 'unicorn', platforms: :ruby
+# gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
